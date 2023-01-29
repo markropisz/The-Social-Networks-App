@@ -43,6 +43,14 @@ with st.sidebar.header('Parametry'):
 
     parameter_person = st.number_input('Person ID', min_value=6, max_value=999, value=6, label_visibility="visible")
 
+st.sidebar.header("Instructions")
+st.sidebar.markdown("""
+This application will review a newly added person and check which community will that person be asigned to based on chosen files. To try it perform the following steps
+- Step 1: Input your Person ID (or leave as default)
+- Step 2: Select the list of downloaded files
+- Step 3: Review the results
+""")
+
 if(len(parameter_nodes) > 0):
     parameter_person = [parameter_person] * len(parameter_nodes)
 
